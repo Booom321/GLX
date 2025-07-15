@@ -54,7 +54,7 @@ int main() {
     GlxString Str{ "This is a string" };
     Str = "This is another string";
 
-	GlxNsMath::GlxVector3f V{ 1.0f, 2.0f, 3.0f };
+    GlxNsMath::GlxVector3f V{ 1.0f, 2.0f, 3.0f };
     return 0;
 }
 ```
