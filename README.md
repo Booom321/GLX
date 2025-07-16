@@ -2,6 +2,14 @@
 
 GLX is a C++ utility library inspired by Galaxy Core. It provides several containers, math utilities, threading, string, and more. GLX is designed to be modular, header-only, and easy to integrate into your C++ projects for tool or software development. =)))
 
+---
+
+| Platform | Supported |
+| -------- | --------- |
+| Windows  | Yes       |
+| macOS    | No        |
+| Linux    | No        |
+
 ## Installation
 
 GLX is a header-only library. To use it in your project:
