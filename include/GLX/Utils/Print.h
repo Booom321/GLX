@@ -3,8 +3,8 @@
 #include "GLX/Preprocessor.h"
 #include "GLX/TypeTraits/RemoveReference.h"
 
-#include "GLX/ThirdParty/fmt/core.h"
-#include "GLX/ThirdParty/fmt/xchar.h"
+#include "../ThirdParty/fmt/core.h"
+#include "../ThirdParty/fmt/xchar.h"
 
 template<typename... TArgs>
 GLX_FORCE_INLINE void Print(std::FILE* InOutputFile, fmt::string_view InFmtString, TArgs&&... InArgs)

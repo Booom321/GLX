@@ -6,7 +6,7 @@
 #include <cstring>
 #include <cmath>
 
-#include "GLX/ThirdParty/xxHash/xxhash.h"
+#include "../ThirdParty/xxHash/xxhash.h"
 
 template<typename TKey, typename TCondition = void>
 class GlxHasher;
@@ -54,7 +54,7 @@ namespace GlxNsHash
 }
 
 template<>
-class GlxHasher<const GlxChar*>
+class GlxHasher<const GlxChar>
 {
 public:
 	static GLX_FORCE_INLINE GlxSizeT GetHashCode(const GlxChar* InStr)
@@ -64,7 +64,7 @@ public:
 };
 
 template<>
-class GlxHasher<const GlxWChar*>
+class GlxHasher<const GlxWChar>
 {
 public:
 	static GLX_FORCE_INLINE GlxSizeT GetHashCode(const GlxWChar* InStr)

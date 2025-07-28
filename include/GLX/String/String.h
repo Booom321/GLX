@@ -4,8 +4,8 @@
 #include "GLX/Containers/DynamicArray.h"
 #include "GLX/TypeTraits/IsStandardLayout.h"
 
-#include "GLX/ThirdParty/fmt/core.h"
-#include "GLX/ThirdParty/fmt/xchar.h"
+#include "../ThirdParty/fmt/core.h"
+#include "../ThirdParty/fmt/xchar.h"
 
 template<typename TChar>
 class GlxBasicString
