@@ -22,7 +22,7 @@ public:
 	GlxTimer() = default;
 	~GlxTimer() = default;
 
-	static GLX_NODISCARD GLX_INLINE TimePoint Now()
+	GLX_NODISCARD static GLX_INLINE TimePoint Now()
 	{
 		return ClockType::now();
 	}

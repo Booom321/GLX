@@ -33,7 +33,7 @@
 #endif
 
 #if !defined(GLX_STRINGIFY_W)
-	#define GLX_STRINGIFY_W(X) L#X
+	#define GLX_STRINGIFY_W(X) L ## #X
 #endif
 
 #if !defined(GLX_CONCATENATE)

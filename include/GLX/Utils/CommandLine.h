@@ -18,32 +18,32 @@ public:
 	static GlxBool HasCommandLineOption(const GlxChar* InOptionName, GlxBool InIgnoreCase = false);
 	static GlxInt64 GetCommandLineOptionIndex(const GlxChar* InOptionName, GlxBool InIgnoreCase = false);
 
-	static GLX_NODISCARD GLX_FORCE_INLINE GlxBool IsParsed()
+	GLX_NODISCARD static GLX_FORCE_INLINE GlxBool IsParsed()
 	{
 		return Parsed;
 	}
 
-	static GLX_NODISCARD GLX_FORCE_INLINE GlxInt32 GetCommandLineArgCount()
+	GLX_NODISCARD static GLX_FORCE_INLINE GlxInt32 GetCommandLineArgCount()
 	{
 		return (GlxInt32)CmdLineArgs.GetElementCount();
 	}
 
-	static GLX_NODISCARD GLX_FORCE_INLINE const GlxString& GetCommandLineAsString()
+	GLX_NODISCARD static GLX_FORCE_INLINE const GlxString& GetCommandLineAsString()
 	{
 		return CmdLine;
 	}
 
-	static GLX_NODISCARD GLX_FORCE_INLINE const GlxString& GetExeFilePath()
+	GLX_NODISCARD static GLX_FORCE_INLINE const GlxString& GetExeFilePath()
 	{
 		return CmdLineArgs[0];
 	}
 
-	static GLX_NODISCARD GLX_FORCE_INLINE const GlxString& GetCommandLineArgAt(GlxInt64 InIndex)
+	GLX_NODISCARD static GLX_FORCE_INLINE const GlxString& GetCommandLineArgAt(GlxInt64 InIndex)
 	{
 		return CmdLineArgs[InIndex];
 	}
 
-	static GLX_NODISCARD GLX_FORCE_INLINE const GlxDynamicArray<GlxString>& GetCommandLineArgs()
+	GLX_NODISCARD static GLX_FORCE_INLINE const GlxDynamicArray<GlxString>& GetCommandLineArgs()
 	{
 		return CmdLineArgs;
 	}
@@ -51,7 +51,7 @@ public:
 	template<
 		typename T,
 		typename U = typename GlxRemoveCVRef<T>::Type>
-	static GLX_NODISCARD GlxBool GetValueOf(const GlxChar* InOptionName, U* InValue, GlxBool InIgnoreCase = false)
+	static GlxBool GetValueOf(const GlxChar* InOptionName, U* InValue, GlxBool InIgnoreCase = false)
 	{
 		if (!InOptionName || !InValue)
 		{

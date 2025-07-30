@@ -845,7 +845,7 @@ public:
 	}
 
 private:
-	static GLX_NODISCARD GlxBasicString Concat(ConstPointerType InLhs, SizeType InLhsLen, ConstPointerType InRhs, SizeType InRhsLen)
+	GLX_NODISCARD static GlxBasicString Concat(ConstPointerType InLhs, SizeType InLhsLen, ConstPointerType InRhs, SizeType InRhsLen)
 	{
 		GLX_ASSERT(InLhsLen >= 0 && InRhsLen >= 0);
 
@@ -855,7 +855,7 @@ private:
 		return Str;
 	}
 
-	static GLX_NODISCARD GlxBasicString Concat(GlxBasicString&& InLhs, GlxBasicString&& InRhs)
+	GLX_NODISCARD static GlxBasicString Concat(GlxBasicString&& InLhs, GlxBasicString&& InRhs)
 	{
 		GlxBasicString Str(InLhs.Length + InRhs.Length);
 
@@ -868,7 +868,7 @@ private:
 		return Str;
 	}
 
-	static GLX_NODISCARD GlxBasicString Concat(GlxBasicString&& InLhs, ConstPointerType InRhs, SizeType InRhsLen)
+	GLX_NODISCARD static GlxBasicString Concat(GlxBasicString&& InLhs, ConstPointerType InRhs, SizeType InRhsLen)
 	{
 		GlxBasicString Str(InLhs.Length + InRhsLen);
 
@@ -879,7 +879,7 @@ private:
 		return Str;
 	}
 
-	static GLX_NODISCARD GlxBasicString Concat(ConstPointerType InLhs, SizeType InLhsLen, GlxBasicString&& InRhs)
+	GLX_NODISCARD static GlxBasicString Concat(ConstPointerType InLhs, SizeType InLhsLen, GlxBasicString&& InRhs)
 	{
 		GlxBasicString Str(InLhsLen + InRhs.Length);
 

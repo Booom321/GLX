@@ -881,12 +881,12 @@ private:
 	}
 
 public:
-	GLX_FORCE_INLINE GLX_NODISCARD ValueType& operator[](const KeyType& InKey)
+	GLX_NODISCARD GLX_FORCE_INLINE ValueType& operator[](const KeyType& InKey)
 	{
 		return GetValueByKey<const KeyType&>(InKey);
 	}
 
-	GLX_FORCE_INLINE GLX_NODISCARD ValueType& operator[](KeyType&& InKey)
+	GLX_NODISCARD GLX_FORCE_INLINE ValueType& operator[](KeyType&& InKey)
 	{
 		return GetValueByKey<KeyType&&>(Move(InKey));
 	}

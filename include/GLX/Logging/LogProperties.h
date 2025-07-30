@@ -12,8 +12,6 @@ namespace GlxNsPrivate
 	class GlxLogPropertiesBase
 	{
 	public:
-		friend class GlxLog;
-
 		GLX_FORCE_INLINE GlxLogPropertiesBase(GlxELogLevel InLevel)
 			: Level(InLevel)
 		{}
@@ -35,7 +33,6 @@ namespace GlxNsPrivate
 			Level = InLevel;
 		}
 
-	protected:
 		GlxELogLevel Level;
 	};
 }

@@ -63,19 +63,19 @@ void GlxAssertion::SetAssertCallback(GlxAssertCallback InCallback)
 #endif
 
 #if !defined(GLX_ALWAYS_ASSERT_MSG)
-	#define GLX_ALWAYS_ASSERT_MSG(InExpr, InMessage, ...)                                  \
-		{                                                                                  \
-			if (!(InExpr))                                                                 \
-			{                                                                              \
-				GlxAssertion::Failed(#InExpr, GLX_LINE, GLX_FILE, InMessage, __VA_ARGS__); \
-				GLX_DEBUG_BREAK;                                                           \
-			}                                                                              \
+	#define GLX_ALWAYS_ASSERT_MSG(InExpr, InMessage, ...) \
+		{ \
+			if (!(InExpr)) \
+			{ \
+				GlxAssertion::Failed(#InExpr, GLX_LINE, GLX_FILE, InMessage, ##__VA_ARGS__); \
+				GLX_DEBUG_BREAK; \
+			} \
 		}
 #endif
 
 #if (GLX_ENABLE_ASSERTION == 1)
 	#define GLX_ASSERT(...) GLX_ALWAYS_ASSERT(__VA_ARGS__)
-	#define GLX_ASSERT_MSG(InExpr, InMessage, ...) GLX_ALWAYS_ASSERT_MSG(InExpr, InMessage, __VA_ARGS__)
+	#define GLX_ASSERT_MSG(InExpr, InMessage, ...) GLX_ALWAYS_ASSERT_MSG(InExpr, InMessage, ##__VA_ARGS__)
 #else
 	#define GLX_ASSERT(...)
 	#define GLX_ASSERT_MSG(InExpr, InMessage, ...)

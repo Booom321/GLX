@@ -706,7 +706,7 @@ namespace GlxNsMath
 		}
 		else if constexpr (T::Size == 4)
 		{
-			return std::isinf(InVec.X) || std::isinf(InVec.Y) || std::isinf(InVec.Z) || std::isinf<ComponentType>(InVec.W);
+			return std::isinf(InVec.X) || std::isinf(InVec.Y) || std::isinf(InVec.Z) || std::isinf(InVec.W);
 		}
 	}
 
